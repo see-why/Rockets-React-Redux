@@ -83,7 +83,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- [@chaw-bot](https://github.com/chaw-bot) and [@redwing555](https://github.com/redwing555) for an awesome collaboration
+- [@BenMukebo](https://github.com/BenMukebo) for an awesome collaboration
 - my dog Perry for the comforting lick here and there
 ## 📝 License
 - This project is [MIT](./LICENSE) licensed.
