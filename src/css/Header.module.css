@@ -38,7 +38,11 @@
   padding: 0 12px;
 }
 
-.links li .navLink {
+.navLink {
   text-decoration: none;
   color: rgb(57, 103, 202);
+}
+
+.links li .active-link:focus {
+  text-decoration: underline;
 }
