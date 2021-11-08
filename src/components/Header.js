@@ -1,7 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-// import '../css/app.css';
 import planet from '../img/planet.png';
 import styles from '../css/Header.module.css';
 
@@ -14,13 +12,13 @@ const Header = () => (
       </div>
       <ul className={styles.links}>
         <li>
-          <NavLink className={styles.navLink} to="/">Rocket</NavLink>
+          <NavLink className={styles.navLink} activeClassName={styles['active-link']} to="/">Rockets</NavLink>
         </li>
         <li>
-          <NavLink className={styles.navLink} to="./Missions">Missions</NavLink>
+          <NavLink className={styles.navLink} activeClassName={styles['active-link']} to="./Missions">Missions</NavLink>
         </li>
         <li>
-          <NavLink className={styles.navLink} to="./Profile">My profile</NavLink>
+          <NavLink className={styles.navLink} activeClassName={styles['active-link']} to="./Profile">My profile</NavLink>
         </li>
       </ul>
     </nav>
