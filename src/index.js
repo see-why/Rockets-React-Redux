@@ -7,6 +7,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import './css/app.css';
+import './css/app.mobile.css';
 
 ReactDOM.render(
   <React.StrictMode>
