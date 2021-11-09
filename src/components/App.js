@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { getFromServer } from '../redux/rockets/rockets';
 import Header from './Header';
 import Missions from './Missions';
+import { loadMissions } from '../redux/missions/mission';
 import Profile from './Profile';
 import Rockets from './Rockets';
 
@@ -12,6 +13,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getFromServer());
+    dispatch(loadMissions());
   }, []);
 
   return (
