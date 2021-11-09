@@ -1,15 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 .logo {
   background-image: url("../img/planet.png");
 }
 
 .rocket-Image {
   width: 200px;
-  height: auto;
+  height: 300px;
 }
 
 .rocket-Card {
   padding: 2%;
   margin: 2% auto;
+  height: 350px;
 }
 
 .rocket-info,
@@ -29,9 +40,28 @@ ul {
   width: 50%;
 }
 
+.rocket-cancel-buttons,
 .rocket-card-buttons {
   margin-left: 40px;
   width: 200px;
   font-size: medium;
   padding: 1%;
+}
+
+.reserved,
+.rocket-card-buttons {
+  background-color: #00f;
+  color: #fff;
+}
+
+.rocket-cancel-buttons {
+  background-color: #808080;
+  color: #000;
+}
+
+.reserved {
+  border-radius: 5px;
+  font-size: small;
+  padding: 2px;
+  width: 65px;
 }
