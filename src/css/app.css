@@ -1,3 +1,37 @@
 .logo {
   background-image: url("../img/planet.png");
 }
+
+.rocket-Image {
+  width: 200px;
+  height: auto;
+}
+
+.rocket-Card {
+  padding: 2%;
+  margin: 2% auto;
+}
+
+.rocket-info,
+.rocket-Details {
+  display: flex;
+}
+
+.rocket-Details {
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+.description {
+  width: 50%;
+}
+
+.rocket-card-buttons {
+  margin-left: 40px;
+  width: 200px;
+  font-size: medium;
+  padding: 1%;
+}
