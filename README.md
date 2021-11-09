@@ -11,7 +11,7 @@ A Space Travelers' Hub consisting of Rockets, Missions, and a Profile section.
 
 ## Live Demo
 
-- [Live Demo Link]( https://book-store-react-redux.netlify.app/)
+- [Live Demo Link]( https://rocket-react-hub.netlify.app/)
 
 ## Getting Started
 
@@ -84,6 +84,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - [@BenMukebo](https://github.com/BenMukebo) for an awesome collaboration
+- [flaticon](https://www.flaticon.com/free-icon/planet_3212567?term=space&page=1&position=19&page=1&position=19&related_id=3212567&origin=style) for the free logo.
 - my dog Perry for the comforting lick here and there
 ## 📝 License
 - This project is [MIT](./LICENSE) licensed.
