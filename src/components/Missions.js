@@ -5,8 +5,6 @@ import MissionsBody from './MissionsBody';
 const Missions = () => {
   const { missions } = useSelector((state) => state);
 
-  console.log(`mission: ${missions}`);
-
   return (
     <div>
       <table>

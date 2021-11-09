@@ -1,40 +1,51 @@
-import propTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/missions/mission';
 
-const MissionsBody = ({ missions }) => (
-  <tbody>
-    {
-      missions.map(({
-        mission_id: id, mission_name: name, description, joined,
-      }) => (
-        <tr key={id}>
-          <td>{name}</td>
-          <td>
-            {description}
-          </td>
-          <td>
-            <span
-              title="badge"
-              className={`${joined ? 'joined' : ''}`}
-            >
-              {!joined ? 'NOT A MEMBER' : 'Active Member' }
-            </span>
-          </td>
-          <td>
-            <button
-              type="button"
-              className={`${joined ? 'joined' : ''}`}
-            >
-              {!joined ? 'Join Mission' : 'Leave Mission' }
-            </button>
-          </td>
-        </tr>
-      ))
-    }
-  </tbody>
-);
+const MissionsBody = ({ mission }) => {
+  const dispatch = useDispatch();
+
+  const join = (id) => {
+    dispatch(joinMission(id));
+  };
+
+  const leave = (id) => {
+    dispatch(leaveMission(id));
+  };
+
+  return (
+    <tr key={mission.id}>
+      <td><strong>{mission.name}</strong></td>
+      <td>{mission.description}</td>
+      <td>
+        {mission.reserved && (
+          <div>Active Member</div>
+        )}
+        {!mission.reserved && (
+          <div>NOT A MEMBER</div>
+        )}
+      </td>
+      <td>
+        {mission.reserved && (
+          <button type="button" onClick={() => leave(mission.id)}>Leave Mission</button>
+        )}
+        {!mission.reserved && (
+          <button type="button" onClick={() => join(mission.id)}>Join Mission</button>
+        )}
+      </td>
+    </tr>
+
+  );
+};
 
 MissionsBody.propTypes = {
-  missions: propTypes.arrayOf(propTypes.any).isRequired,
+  mission: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool,
+  }).isRequired,
 };
 
 export default MissionsBody;
