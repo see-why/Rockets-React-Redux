@@ -17,6 +17,7 @@ const Header = () => (
         <li>
           <NavLink className={styles.navLink} activeClassName={styles['active-link']} to="./Missions">Missions</NavLink>
         </li>
+        <li>|</li>
         <li>
           <NavLink className={styles.navLink} activeClassName={styles['active-link']} to="./Profile">My profile</NavLink>
         </li>
