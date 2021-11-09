@@ -3,21 +3,31 @@ import { useSelector } from 'react-redux';
 import MissionsBody from './MissionsBody';
 
 const Missions = () => {
-  const { missions } = useSelector((state) => state).missions;
+  const { missions } = useSelector((state) => state);
+
+  console.log(`mission: ${missions}`);
+
   return (
-    <section className="missions-section">
-      <table className="mission-table">
+    <div>
+      <table>
         <thead>
           <tr>
             <th>Missions</th>
-            <th>Descripition</th>
+            <th>Description</th>
             <th>Status</th>
-            <th aria-label="Leave/Join Mission" />
+            <th> </th>
           </tr>
         </thead>
-        <MissionsBody missions={missions} />
+        <tbody>
+          {missions.map((mission) => (
+            <MissionsBody
+              key={mission.id}
+              mission={mission}
+            />
+          ))}
+        </tbody>
       </table>
-    </section>
+    </div>
   );
 };
 
