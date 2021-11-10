@@ -43,3 +43,24 @@
   width: 50%;
   padding: 0.5rem 0.5rem 0.8rem;
 }
+
+.badges {
+  width: 15%;
+}
+
+.badges > p {
+  color: white;
+  width: 7rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+  /* background-color: var(--back-color); */
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+
+.badges .bdgActive {
+  background-color: var(--secondary-bdg);
+  color: var(--white-backg);
+}
