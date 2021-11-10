@@ -64,3 +64,21 @@
   background-color: var(--secondary-bdg);
   color: var(--white-backg);
 }
+
+.btns {
+  width: 20%;
+  text-align: center;
+}
+
+.btns > button {
+  outline: none;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 3px;
+  padding: 0.4rem 1rem;
+}
+
+.btns .btnActive {
+  border: var(--border-act);
+  color: var(--secondary-btn);
+}
