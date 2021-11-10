@@ -16,6 +16,8 @@ const Profile = () => {
         <h2>My Missions</h2>
         <ul className="rocket-Lists">
           {reservedMissions.map((item) => (<li key={uuidv4()}>{item.name}</li>))}
+          {(reservedMissions === undefined || reservedMissions.length < 1)
+          && (<h3>No missions joined</h3>)}
         </ul>
       </div>
       <div className="my-rockets">
@@ -24,7 +26,7 @@ const Profile = () => {
           {reservedRockets && reservedRockets.map((item) => (<li key={uuidv4()}>{item.name}</li>))}
           {
           (reservedRockets === undefined || reservedRockets.length < 1)
-          && (<h3>No reservations made</h3>)
+          && (<h3>No rockets reserved</h3>)
           }
         </ul>
       </div>
