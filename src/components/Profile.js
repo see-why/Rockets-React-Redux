@@ -16,7 +16,11 @@ const Profile = () => {
       <div className="my-rockets">
         <h2>My Rockets</h2>
         <ul className="rocket-Lists">
-          {reservedRockets.map((item) => (<li key={uuidv4()}>{item.name}</li>))}
+          {reservedRockets && reservedRockets.map((item) => (<li key={uuidv4()}>{item.name}</li>))}
+          {
+          (reservedRockets === undefined || reservedRockets.length < 1)
+          && (<h3>No reservations made</h3>)
+          }
         </ul>
       </div>
     </div>
