@@ -18,7 +18,7 @@ const MissionsBody = ({ mission }) => {
     <tr key={mission.id} id={mission.id}>
       <td><strong>{mission.name}</strong></td>
       <td>{mission.description}</td>
-      <td>
+      <td className={styles.badges}>
         {mission.reserved && (
           <div>Active Member</div>
         )}
@@ -26,7 +26,7 @@ const MissionsBody = ({ mission }) => {
           <div>NOT A MEMBER</div>
         )}
       </td>
-      <td>
+      <td className={styles.btns}>
         {mission.reserved && (
           <button type="button" onClick={() => leave(mission.id)}>Leave Mission</button>
         )}
