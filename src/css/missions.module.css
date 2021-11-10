@@ -1,6 +1,7 @@
 .table {
   border: 1px  solid #e8e8e8;
-  margin: 2rem 1rem;
+  width: 95%;
+  margin: 0 auto;
   background-color: #e8e8e8;
 }
 
