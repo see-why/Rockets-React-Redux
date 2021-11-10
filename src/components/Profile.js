@@ -8,6 +8,7 @@ const Profile = () => {
   const { missions } = useSelector((state) => state);
 
   const reservedRockets = rockets.filter((item) => (item.reserved === true));
+  const reservedMissions = missions.filter((item) => (item.reserved === true));
 
   return (
     <div className="my-profile">
