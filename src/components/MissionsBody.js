@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../redux/missions/mission';
+import styles from '../css/missionsBody.module.css';
 
 const MissionsBody = ({ mission }) => {
   const dispatch = useDispatch();
@@ -15,23 +16,23 @@ const MissionsBody = ({ mission }) => {
   };
 
   return (
-    <tr key={mission.id} id={mission.id}>
-      <td><strong>{mission.name}</strong></td>
-      <td>{mission.description}</td>
+    <tr key={mission.id} id={mission.id} className={styles.mission}>
+      <td className={styles.name}><strong>{mission.name}</strong></td>
+      <td className={styles.description}>{mission.description}</td>
       <td className={styles.badges}>
         {mission.reserved && (
-          <div>Active Member</div>
+          <p className={styles.bdgActive}>Active Member</p>
         )}
         {!mission.reserved && (
-          <div>NOT A MEMBER</div>
+          <p className={styles.bdg}>NOT A MEMBER</p>
         )}
       </td>
       <td className={styles.btns}>
         {mission.reserved && (
-          <button type="button" onClick={() => leave(mission.id)}>Leave Mission</button>
+          <button className={styles.btnActive} type="button" onClick={() => leave(mission.id)}>Leave Mission</button>
         )}
         {!mission.reserved && (
-          <button type="button" onClick={() => join(mission.id)}>Join Mission</button>
+          <button className={styles.btn} type="button" onClick={() => join(mission.id)}>Join Mission</button>
         )}
       </td>
     </tr>
