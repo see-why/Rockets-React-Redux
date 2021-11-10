@@ -1,0 +1,45 @@
+:root {
+  --white-backg: #fff;
+  --back-color: #242424;
+  --secondary-bdg: #0d869b;
+  --primary: #525252;
+  --secondary-btn: #b60c23;
+  --border: 2px solid var(--back-color);
+  --border-act: 2px solid var(--secondary-btn);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mission {
+  background-color: white;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mission:nth-child(odd) {
+  background-color: #eee;
+}
+
+.name {
+  width: 15%;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-start;
+  padding: 0.7rem 0.5rem;
+}
+
+.name strong {
+  /* width: 15%;
+  display: flex;
+  justify-self: flex-start;
+  justify-items: flex-start;
+  align-items: flex-start; */
+}
+
+.description {
+  width: 50%;
+  padding: 0.5rem 0.5rem 0.8rem;
+}
