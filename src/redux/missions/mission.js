@@ -43,11 +43,21 @@ const missionsReducer = (state = initialState, action) => {
     case LOAD_MISSIONS:
       return missions;
     case JOIN_MISSION:
+      // onsole.log(missions);
       return state.map((mission) => {
+        // console.log(`mission.id:  ${mission.id} id: ${missions}`);
         if (mission.id !== missions) {
           return { ...mission };
         }
         return { ...mission, reserved: true };
+      });
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        // console.log(`mission.id:  ${mission.id} id: ${missions}`);
+        if (mission.id !== missions) {
+          return { ...mission };
+        }
+        return { ...mission, reserved: false };
       });
     default:
       return state;
