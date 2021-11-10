@@ -9,14 +9,14 @@ export const loadMission = (missions) => ({
   payload: missions,
 });
 
-export const joinMission = (mission) => ({
+export const joinMission = (id) => ({
   type: JOIN_MISSION,
-  payload: mission,
+  payload: id,
 });
 
-export const leaveMission = (mission) => ({
+export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
-  payload: mission,
+  payload: id,
 });
 
 const getMissions = async () => {
@@ -43,25 +43,19 @@ const missionsReducer = (state = initialState, action) => {
     case LOAD_MISSIONS:
       return missions;
     case JOIN_MISSION:
-      return {
-        ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.id !== action.payload) {
-            return { ...mission };
-          }
-          return { ...mission, reserved: true };
-        }),
-      };
+      return state.map((mission) => {
+        if (mission.id !== missions) {
+          return { ...mission };
+        }
+        return { ...mission, reserved: true };
+      });
     case LEAVE_MISSION:
-      return {
-        ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.id !== action.payload) {
-            return { ...mission };
-          }
-          return { ...mission, reserved: false };
-        }),
-      };
+      return state.map((mission) => {
+        if (mission.id !== missions) {
+          return { ...mission };
+        }
+        return { ...mission, reserved: false };
+      });
     default:
       return state;
   }
