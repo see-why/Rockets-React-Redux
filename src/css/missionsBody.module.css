@@ -31,17 +31,10 @@
   padding: 0.7rem 0.5rem;
 }
 
-.name strong {
-  /* width: 15%;
-  display: flex;
-  justify-self: flex-start;
-  justify-items: flex-start;
-  align-items: flex-start; */
-}
-
 .description {
   width: 50%;
   padding: 0.5rem 0.5rem 0.8rem;
+  font-size: 0.7rem;
 }
 
 .badges {
@@ -55,8 +48,6 @@
   margin: 0 auto;
   padding: 0.3rem 0.5rem;
   font-size: 0.7rem;
-
-  /* background-color: var(--back-color); */
   background-color: var(--primary);
   border-radius: 8px;
 }
