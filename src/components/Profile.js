@@ -14,6 +14,9 @@ const Profile = () => {
     <div className="my-profile">
       <div className="my-missions">
         <h2>My Missions</h2>
+        <ul className="rocket-Lists">
+          {reservedMissions.map((item) => (<li key={uuidv4()}>{item.name}</li>))}
+        </ul>
       </div>
       <div className="my-rockets">
         <h2>My Rockets</h2>
