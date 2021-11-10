@@ -3,7 +3,7 @@ import { configure, shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
-import Rockets from '../components/rockets';
+import Rockets from '../components/rockets.js';
 
 configure({ adapter: new Adapter() });
 
