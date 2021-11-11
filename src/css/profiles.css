@@ -1,0 +1,23 @@
+.my-profile {
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.my-missions,
+.my-rockets {
+  width: 45%;
+}
+
+.rocket-Lists {
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.rocket-Lists li {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+.dummy {
+  border: none;
+}

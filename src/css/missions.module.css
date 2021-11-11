@@ -1,0 +1,15 @@
+.table {
+  border: 1px  solid #e8e8e8;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #e8e8e8;
+}
+
+.head {
+  border: 1px  solid #e8e8e8;
+  background-color: white;
+}
+
+.head th {
+  padding: 0.5rem;
+}

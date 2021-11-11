@@ -1,0 +1,76 @@
+:root {
+  --white-backg: #fff;
+  --back-color: #242424;
+  --secondary-bdg: #0d869b;
+  --primary: #525252;
+  --secondary-btn: #b60c23;
+  --border: 2px solid var(--back-color);
+  --border-act: 2px solid var(--secondary-btn);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mission {
+  background-color: white;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mission:nth-child(odd) {
+  background-color: #eee;
+}
+
+.name {
+  width: 15%;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-start;
+  padding: 0.7rem 0.5rem;
+}
+
+.description {
+  width: 50%;
+  padding: 0.5rem 0.5rem 0.8rem;
+  font-size: 0.7rem;
+}
+
+.badges {
+  width: 15%;
+}
+
+.badges > p {
+  color: white;
+  width: 7rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+
+.badges .bdgActive {
+  background-color: var(--secondary-bdg);
+  color: var(--white-backg);
+}
+
+.btns {
+  width: 20%;
+  text-align: center;
+}
+
+.btns > button {
+  outline: none;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 3px;
+  padding: 0.4rem 1rem;
+}
+
+.btns .btnActive {
+  border: var(--border-act);
+  color: var(--secondary-btn);
+}

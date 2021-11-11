@@ -1,0 +1,19 @@
+@media only screen and (max-width: 992px) {
+  ul {
+    padding-left: 0;
+  }
+
+  .rocket-Card,
+  .rocket-Image {
+    height: auto;
+  }
+
+  .rocket-info {
+    flex-direction: column;
+  }
+
+  .rocket-cancel-buttons,
+  .rocket-card-buttons {
+    margin-left: 0;
+  }
+}

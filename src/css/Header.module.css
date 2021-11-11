@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  height: 0.125rem;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.3rem;
+  background-color: #e8e8e8;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 5% 0.1rem;
+}
+
+.nav .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.title h2 {
+  font-size: 1.6rem;
+}
+
+.nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.links li {
+  padding: 0 12px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: rgb(57, 103, 202);
+}
+
+.links li .active-link:focus {
+  text-decoration: underline;
+}
